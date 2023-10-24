@@ -18,6 +18,7 @@ namespace Test.Core
         }
 
         public virtual void LoadEntities() { }
+        public virtual void OnUpdate() { }
 
         public void Draw(SpriteBatch sb)
         {
@@ -29,6 +30,7 @@ namespace Test.Core
 
         public void Update()
         {
+            OnUpdate();
             foreach (Entity entity in entities)
             {
                 if (entity is IUpdate updateable) updateable.Update();

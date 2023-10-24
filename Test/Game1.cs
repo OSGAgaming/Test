@@ -5,19 +5,23 @@ using Test.Core;
 
 namespace Test
 {
-    public class Game1 : Game
+    public class Main : Game
     {
-        private GraphicsDeviceManager _graphics;
-        private SpriteBatch _spriteBatch;
+        public static GraphicsDeviceManager graphics;
+        public static SpriteBatch _spriteBatch;
 
         public static Scene1 CurrentWorld;
 
-        public Game1()
+        public Main()
         {
-            _graphics = new GraphicsDeviceManager(this);
+            graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
-        }
+
+            graphics.PreferredBackBufferWidth = 1280;
+            graphics.PreferredBackBufferHeight = 720;
+            graphics.ApplyChanges();
+        }        
 
         protected override void Initialize()
         {
