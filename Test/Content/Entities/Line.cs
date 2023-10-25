@@ -22,7 +22,7 @@ namespace Test.Content.Entities
             this.p1 = p1;
             this.p2 = p2;
             this.lineWidth = lineWidth;
-            Color = Color.Black;
+            Color = Color.White;
         }
 
         public void Update() { }

@@ -53,9 +53,9 @@ namespace Test
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Transparent);
 
-            _spriteBatch.Begin();
+            _spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.LinearWrap);
             CurrentWorld.Draw(_spriteBatch);
             _spriteBatch.End();
             // TODO: Add your drawing code here

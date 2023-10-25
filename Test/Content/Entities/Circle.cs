@@ -17,7 +17,7 @@ namespace Test.Content.Entities
         public Circle(int radius)
         {
             Radius = radius;
-            Color = Color.Black;
+            Color = Color.White;
         }
 
         public void Update()

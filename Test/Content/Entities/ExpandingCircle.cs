@@ -27,5 +27,15 @@ namespace Test.Content.Entities
             Radius += Velocity;
         }
 
+        public void RecipColorTo(Color target)
+        {
+            Color t = target;
+            Color = new Color(
+                (int)(Color.R + (t.R - Color.R) / 16f), 
+                (int)(Color.G + (t.G - Color.G) / 16f), 
+                (int)(Color.B + (t.B - Color.B) / 16f),
+                (int)(Color.A + (t.A - Color.A) / 16f));
+        }
+
     }
 }
